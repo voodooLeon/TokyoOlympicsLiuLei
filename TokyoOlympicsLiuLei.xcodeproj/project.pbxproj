@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		970194D4215DFE6A0079FBD4 /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 970194D3215DFE6A0079FBD4 /* Events.m */; };
+		970194D7215E04A40079FBD4 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 970194D6215E04A40079FBD4 /* Schedule.m */; };
+		970194DB215E10B80079FBD4 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 970194DA215E10B80079FBD4 /* BaseDAO.m */; };
+		973BB5CE215F1A9D00EBCC55 /* EventsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 973BB5CD215F1A9D00EBCC55 /* EventsDAO.m */; };
+		974D8B6B2160724900F0E2A7 /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B6A2160724900F0E2A7 /* ScheduleDAO.m */; };
+		974D8B6E2160768500F0E2A7 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B6D2160768500F0E2A7 /* DBHelper.m */; };
+		97FEA8BD215CA386004A9CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FEA8BC215CA386004A9CAA /* AppDelegate.m */; };
+		97FEA8C0215CA386004A9CAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FEA8BF215CA386004A9CAA /* ViewController.m */; };
+		97FEA8C3215CA386004A9CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8C1215CA386004A9CAA /* Main.storyboard */; };
+		97FEA8C6215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97FEA8C4215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld */; };
+		97FEA8C8215CA386004A9CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8C7215CA386004A9CAA /* Assets.xcassets */; };
+		97FEA8CB215CA386004A9CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8C9215CA386004A9CAA /* LaunchScreen.storyboard */; };
+		97FEA8CE215CA386004A9CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FEA8CD215CA386004A9CAA /* main.m */; };
+		97FEA8DE215CDE36004A9CAA /* DBFile in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8DD215CDE36004A9CAA /* DBFile */; };
+		97FEA8E1215CE0A9004A9CAA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FEA8E0215CE0A9004A9CAA /* libsqlite3.0.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		970194D2215DFE6A0079FBD4 /* Events.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		970194D3215DFE6A0079FBD4 /* Events.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Events.m; sourceTree = "<group>"; };
+		970194D5215E04A40079FBD4 /* Schedule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		970194D6215E04A40079FBD4 /* Schedule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		970194D9215E10B80079FBD4 /* BaseDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
+		970194DA215E10B80079FBD4 /* BaseDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
+		973BB5CC215F1A9D00EBCC55 /* EventsDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDAO.h; sourceTree = "<group>"; };
+		973BB5CD215F1A9D00EBCC55 /* EventsDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsDAO.m; sourceTree = "<group>"; };
+		974D8B692160724900F0E2A7 /* ScheduleDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleDAO.h; sourceTree = "<group>"; };
+		974D8B6A2160724900F0E2A7 /* ScheduleDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleDAO.m; sourceTree = "<group>"; };
+		974D8B6C2160768500F0E2A7 /* DBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		974D8B6D2160768500F0E2A7 /* DBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		97FEA8B8215CA386004A9CAA /* TokyoOlympicsLiuLei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokyoOlympicsLiuLei.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97FEA8BB215CA386004A9CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97FEA8BC215CA386004A9CAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		97FEA8BE215CA386004A9CAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		97FEA8BF215CA386004A9CAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97FEA8C2215CA386004A9CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97FEA8C5215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TokyoOlympicsLiuLei.xcdatamodel; sourceTree = "<group>"; };
+		97FEA8C7215CA386004A9CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97FEA8CA215CA386004A9CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97FEA8CC215CA386004A9CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97FEA8CD215CA386004A9CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97FEA8DD215CDE36004A9CAA /* DBFile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DBFile; sourceTree = "<group>"; };
+		97FEA8E0215CE0A9004A9CAA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97FEA8B5215CA386004A9CAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97FEA8E1215CE0A9004A9CAA /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		970194D1215DFDA10079FBD4 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				970194D2215DFE6A0079FBD4 /* Events.h */,
+				970194D3215DFE6A0079FBD4 /* Events.m */,
+				970194D5215E04A40079FBD4 /* Schedule.h */,
+				970194D6215E04A40079FBD4 /* Schedule.m */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		970194D8215E0F000079FBD4 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				970194D9215E10B80079FBD4 /* BaseDAO.h */,
+				970194DA215E10B80079FBD4 /* BaseDAO.m */,
+				973BB5CC215F1A9D00EBCC55 /* EventsDAO.h */,
+				973BB5CD215F1A9D00EBCC55 /* EventsDAO.m */,
+				974D8B692160724900F0E2A7 /* ScheduleDAO.h */,
+				974D8B6A2160724900F0E2A7 /* ScheduleDAO.m */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		97FEA8AF215CA386004A9CAA = {
+			isa = PBXGroup;
+			children = (
+				97FEA8D5215CC584004A9CAA /* 数据持久化逻辑组件 */,
+				97FEA8BA215CA386004A9CAA /* 表示逻辑组件 */,
+				97FEA8B9215CA386004A9CAA /* Products */,
+				97FEA8DF215CE0A9004A9CAA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		97FEA8B9215CA386004A9CAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97FEA8B8215CA386004A9CAA /* TokyoOlympicsLiuLei.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97FEA8BA215CA386004A9CAA /* 表示逻辑组件 */ = {
+			isa = PBXGroup;
+			children = (
+				97FEA8BB215CA386004A9CAA /* AppDelegate.h */,
+				97FEA8BC215CA386004A9CAA /* AppDelegate.m */,
+				97FEA8BE215CA386004A9CAA /* ViewController.h */,
+				97FEA8BF215CA386004A9CAA /* ViewController.m */,
+				97FEA8C1215CA386004A9CAA /* Main.storyboard */,
+				97FEA8C7215CA386004A9CAA /* Assets.xcassets */,
+				97FEA8C9215CA386004A9CAA /* LaunchScreen.storyboard */,
+				97FEA8CC215CA386004A9CAA /* Info.plist */,
+				97FEA8CD215CA386004A9CAA /* main.m */,
+				97FEA8C4215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld */,
+			);
+			name = "表示逻辑组件";
+			path = TokyoOlympicsLiuLei;
+			sourceTree = "<group>";
+		};
+		97FEA8D5215CC584004A9CAA /* 数据持久化逻辑组件 */ = {
+			isa = PBXGroup;
+			children = (
+				970194D8215E0F000079FBD4 /* dao */,
+				970194D1215DFDA10079FBD4 /* domain */,
+				97FEA8DD215CDE36004A9CAA /* DBFile */,
+				974D8B6C2160768500F0E2A7 /* DBHelper.h */,
+				974D8B6D2160768500F0E2A7 /* DBHelper.m */,
+			);
+			path = "数据持久化逻辑组件";
+			sourceTree = "<group>";
+		};
+		97FEA8DF215CE0A9004A9CAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97FEA8E0215CE0A9004A9CAA /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97FEA8B7215CA386004A9CAA /* TokyoOlympicsLiuLei */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97FEA8D1215CA386004A9CAA /* Build configuration list for PBXNativeTarget "TokyoOlympicsLiuLei" */;
+			buildPhases = (
+				97FEA8B4215CA386004A9CAA /* Sources */,
+				97FEA8B5215CA386004A9CAA /* Frameworks */,
+				97FEA8B6215CA386004A9CAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TokyoOlympicsLiuLei;
+			productName = TokyoOlympicsLiuLei;
+			productReference = 97FEA8B8215CA386004A9CAA /* TokyoOlympicsLiuLei.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97FEA8B0215CA386004A9CAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = LeiLiu;
+				TargetAttributes = {
+					97FEA8B7215CA386004A9CAA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 97FEA8B3215CA386004A9CAA /* Build configuration list for PBXProject "TokyoOlympicsLiuLei" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97FEA8AF215CA386004A9CAA;
+			productRefGroup = 97FEA8B9215CA386004A9CAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97FEA8B7215CA386004A9CAA /* TokyoOlympicsLiuLei */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97FEA8B6215CA386004A9CAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97FEA8DE215CDE36004A9CAA /* DBFile in Resources */,
+				97FEA8CB215CA386004A9CAA /* LaunchScreen.storyboard in Resources */,
+				97FEA8C8215CA386004A9CAA /* Assets.xcassets in Resources */,
+				97FEA8C3215CA386004A9CAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97FEA8B4215CA386004A9CAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				970194DB215E10B80079FBD4 /* BaseDAO.m in Sources */,
+				974D8B6E2160768500F0E2A7 /* DBHelper.m in Sources */,
+				970194D7215E04A40079FBD4 /* Schedule.m in Sources */,
+				97FEA8C0215CA386004A9CAA /* ViewController.m in Sources */,
+				97FEA8C6215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld in Sources */,
+				970194D4215DFE6A0079FBD4 /* Events.m in Sources */,
+				97FEA8CE215CA386004A9CAA /* main.m in Sources */,
+				974D8B6B2160724900F0E2A7 /* ScheduleDAO.m in Sources */,
+				97FEA8BD215CA386004A9CAA /* AppDelegate.m in Sources */,
+				973BB5CE215F1A9D00EBCC55 /* EventsDAO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		97FEA8C1215CA386004A9CAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97FEA8C2215CA386004A9CAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97FEA8C9215CA386004A9CAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97FEA8CA215CA386004A9CAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97FEA8CF215CA386004A9CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		97FEA8D0215CA386004A9CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97FEA8D2215CA386004A9CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G294L23T65;
+				INFOPLIST_FILE = TokyoOlympicsLiuLei/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LeiLIu.TokyoOlympicsLiuLei;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97FEA8D3215CA386004A9CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G294L23T65;
+				INFOPLIST_FILE = TokyoOlympicsLiuLei/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LeiLIu.TokyoOlympicsLiuLei;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97FEA8B3215CA386004A9CAA /* Build configuration list for PBXProject "TokyoOlympicsLiuLei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97FEA8CF215CA386004A9CAA /* Debug */,
+				97FEA8D0215CA386004A9CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97FEA8D1215CA386004A9CAA /* Build configuration list for PBXNativeTarget "TokyoOlympicsLiuLei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97FEA8D2215CA386004A9CAA /* Debug */,
+				97FEA8D3215CA386004A9CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		97FEA8C4215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97FEA8C5215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodel */,
+			);
+			currentVersion = 97FEA8C5215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodel */;
+			path = TokyoOlympicsLiuLei.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 97FEA8B0215CA386004A9CAA /* Project object */;
+}
