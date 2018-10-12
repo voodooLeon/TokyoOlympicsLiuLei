@@ -13,6 +13,7 @@
 		973BB5CE215F1A9D00EBCC55 /* EventsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 973BB5CD215F1A9D00EBCC55 /* EventsDAO.m */; };
 		974D8B6B2160724900F0E2A7 /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B6A2160724900F0E2A7 /* ScheduleDAO.m */; };
 		974D8B6E2160768500F0E2A7 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B6D2160768500F0E2A7 /* DBHelper.m */; };
+		9754B9B4217092EE00775D43 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9754B9B3217092EE00775D43 /* HomeViewController.m */; };
 		97FEA8BD215CA386004A9CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FEA8BC215CA386004A9CAA /* AppDelegate.m */; };
 		97FEA8C0215CA386004A9CAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FEA8BF215CA386004A9CAA /* ViewController.m */; };
 		97FEA8C3215CA386004A9CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8C1215CA386004A9CAA /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 		974D8B6A2160724900F0E2A7 /* ScheduleDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleDAO.m; sourceTree = "<group>"; };
 		974D8B6C2160768500F0E2A7 /* DBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
 		974D8B6D2160768500F0E2A7 /* DBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		9754B9B2217092EE00775D43 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		9754B9B3217092EE00775D43 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		97FEA8B8215CA386004A9CAA /* TokyoOlympicsLiuLei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokyoOlympicsLiuLei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FEA8BB215CA386004A9CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97FEA8BC215CA386004A9CAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				97FEA8CC215CA386004A9CAA /* Info.plist */,
 				97FEA8CD215CA386004A9CAA /* main.m */,
 				97FEA8C4215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld */,
+				9754B9B2217092EE00775D43 /* HomeViewController.h */,
+				9754B9B3217092EE00775D43 /* HomeViewController.m */,
 			);
 			name = "表示逻辑组件";
 			path = TokyoOlympicsLiuLei;
@@ -221,6 +226,7 @@
 				97FEA8C0215CA386004A9CAA /* ViewController.m in Sources */,
 				97FEA8C6215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld in Sources */,
 				970194D4215DFE6A0079FBD4 /* Events.m in Sources */,
+				9754B9B4217092EE00775D43 /* HomeViewController.m in Sources */,
 				97FEA8CE215CA386004A9CAA /* main.m in Sources */,
 				974D8B6B2160724900F0E2A7 /* ScheduleDAO.m in Sources */,
 				97FEA8BD215CA386004A9CAA /* AppDelegate.m in Sources */,
