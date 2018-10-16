@@ -10,6 +10,7 @@
 		970194D4215DFE6A0079FBD4 /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 970194D3215DFE6A0079FBD4 /* Events.m */; };
 		970194D7215E04A40079FBD4 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 970194D6215E04A40079FBD4 /* Schedule.m */; };
 		970194DB215E10B80079FBD4 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 970194DA215E10B80079FBD4 /* BaseDAO.m */; };
+		9704FDA52175AB87009D7F98 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9704FDA42175AB87009D7F98 /* ScheduleViewController.m */; };
 		973BB5CE215F1A9D00EBCC55 /* EventsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 973BB5CD215F1A9D00EBCC55 /* EventsDAO.m */; };
 		974B192D21742B1F00F3C833 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 974B192C21742B1F00F3C833 /* EventsViewController.m */; };
 		974B193021748E6900F3C833 /* EventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 974B192F21748E6900F3C833 /* EventsDetailViewController.m */; };
@@ -35,6 +36,8 @@
 		970194D6215E04A40079FBD4 /* Schedule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		970194D9215E10B80079FBD4 /* BaseDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
 		970194DA215E10B80079FBD4 /* BaseDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
+		9704FDA32175AB87009D7F98 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		9704FDA42175AB87009D7F98 /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		973BB5CC215F1A9D00EBCC55 /* EventsDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDAO.h; sourceTree = "<group>"; };
 		973BB5CD215F1A9D00EBCC55 /* EventsDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsDAO.m; sourceTree = "<group>"; };
 		974B192B21742B1F00F3C833 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				974B192F21748E6900F3C833 /* EventsDetailViewController.m */,
 				974B19342174902900F3C833 /* EventsViewCell.h */,
 				974B19352174902900F3C833 /* EventsViewCell.m */,
+				9704FDA32175AB87009D7F98 /* ScheduleViewController.h */,
+				9704FDA42175AB87009D7F98 /* ScheduleViewController.m */,
 			);
 			name = "表示逻辑组件";
 			path = TokyoOlympicsLiuLei;
@@ -242,6 +247,7 @@
 				97FEA8C0215CA386004A9CAA /* ViewController.m in Sources */,
 				97FEA8C6215CA386004A9CAA /* TokyoOlympicsLiuLei.xcdatamodeld in Sources */,
 				970194D4215DFE6A0079FBD4 /* Events.m in Sources */,
+				9704FDA52175AB87009D7F98 /* ScheduleViewController.m in Sources */,
 				974B19362174902900F3C833 /* EventsViewCell.m in Sources */,
 				974B193021748E6900F3C833 /* EventsDetailViewController.m in Sources */,
 				9754B9B4217092EE00775D43 /* HomeViewController.m in Sources */,
