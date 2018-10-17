@@ -73,19 +73,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //比赛日期
-    
-    return 0;
+    NSString* strGameDate= self.arrayGameDataList[section];
+    //比赛日期下的比赛日程表
+    NSArray *schedules= self.data[strGameDate];
+    return [schedules count];
+
 }
 
-/*
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    //比赛日期
+    NSString* strGameDate=self.arrayGameDataList[section];
+    return strGameDate;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
