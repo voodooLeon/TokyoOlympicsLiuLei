@@ -115,13 +115,64 @@
                     <view key="view" contentMode="scaleToFill" id="5Ao-xM-9gX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CountDown-bg" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-yf-112">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lbl Count Down Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-LP-P1k">
+                                <rect key="frame" x="70" y="118" width="274" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CountDown-bg" translatesAutoresizingMaskIntoConstraints="NO" id="0db-B7-8ue">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lbl Count Down Pad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKf-9c-XGH">
+                                <rect key="frame" x="108" y="110" width="552" height="162"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0db-B7-8ue" secondAttribute="trailing" id="02U-yQ-V1a"/>
+                            <constraint firstItem="0db-B7-8ue" firstAttribute="leading" secondItem="5Ao-xM-9gX" secondAttribute="leading" id="7Ol-zS-Vjm"/>
+                            <constraint firstItem="FKf-9c-XGH" firstAttribute="leading" secondItem="5Ao-xM-9gX" secondAttribute="leadingMargin" constant="88" id="GR5-sH-odB"/>
+                            <constraint firstItem="0db-B7-8ue" firstAttribute="top" secondItem="5Ao-xM-9gX" secondAttribute="top" id="KXh-3u-qFm"/>
+                            <constraint firstItem="aIG-x3-wKe" firstAttribute="top" secondItem="FKf-9c-XGH" secondAttribute="bottom" constant="702" id="RbS-AL-DH1"/>
+                            <constraint firstItem="0db-B7-8ue" firstAttribute="centerX" secondItem="FKf-9c-XGH" secondAttribute="centerX" id="c2o-rq-cvK"/>
+                            <constraint firstItem="FKf-9c-XGH" firstAttribute="top" secondItem="2U9-ck-Oh1" secondAttribute="bottom" constant="90" id="e2c-jh-azm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="R7O-yf-112"/>
+                                <exclude reference="wRf-LP-P1k"/>
+                                <exclude reference="0db-B7-8ue"/>
+                                <exclude reference="FKf-9c-XGH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="R7O-yf-112"/>
+                                <include reference="wRf-LP-P1k"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="0db-B7-8ue"/>
+                                <include reference="FKf-9c-XGH"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="BAd-nM-JGL"/>
+                    <tabBarItem key="tabBarItem" title="CountDown" image="CountDown-TabBarIcon" id="BAd-nM-JGL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dB7-gK-ZUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="95"/>
+            <point key="canvasLocation" x="356.25" y="94.3359375"/>
         </scene>
         <!--About-->
         <scene sceneID="Lsn-Ba-XV2">
@@ -180,6 +231,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CountDown-TabBarIcon" width="30" height="30"/>
+        <image name="CountDown-bg" width="414" height="736"/>
         <image name="Home-TabBarIcon" width="30" height="30"/>
         <image name="Home-bg" width="414" height="736"/>
     </resources>

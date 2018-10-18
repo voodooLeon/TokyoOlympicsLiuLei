@@ -90,9 +90,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
+    //比赛日期
+    NSString* strGameDate=self.arrayGameDataList[indexPath.section];
+    //比赛日期下的比赛日程表
+    NSArray *schedules=self.data[strGameDate];
+    
+    Schedule *schedule=schedules[indexPath.row];
+    NSString* subtitle=[[NSString alloc] initWithFormat:@"%@ | %@",schedule.GameInfo,schedule.Event.EventName];
+    
+    cell.textLabel.text=schedule.GameTime;
+    cell.detailTextLabel.text=subtitle;
+    
     return cell;
 }
 
+-(NSArray *) sectionIndexTitlesForTabView:(UITableView *) tabView{
+    NSMutableArray *listTitles=[[NSMutableArray alloc] init];
+    //2020-08-09 ->08-09
+    for (NSString *item in self.arrayGameDataList ) {
+        NSString *title=[item substringFromIndex:5];
+        [listTitles addObject:title];
+    }
+    return listTitles;
+}
 
 /*
 // Override to support conditional editing of the table view.
