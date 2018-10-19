@@ -1,10 +1,11 @@
 //
-//  ScheduleViewController.m
+//  ScheduleViewController.h
 //  TokyoOlympicsLiuLei
 //
 //  Created by edarong on 2018/10/16.
 //  Copyright © 2018年 LeiLiu. All rights reserved.
 //
+
 
 #import "ScheduleViewController.h"
 #import "EventsDetailViewController.h"
@@ -15,9 +16,9 @@
 
 @interface ScheduleViewController ()
 //表视图使用的数据
-@property(strong,nonatomic) NSDictionary *data;
+@property (strong, nonatomic) NSDictionary * data;
 //比赛日期列表
-@property(strong,nonatomic) NSArray *arrayGameDataList;
+@property (strong, nonatomic) NSArray * arrayGameDateList;
 @end
 
 @implementation ScheduleViewController
@@ -25,137 +26,98 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.data==nil||[self.data count]==0) {
-        self.data=[self readData];
-        NSArray* keys=[self.data allKeys];
+    if (self.data == nil || [self.data count] == 0) {
+        //查询所有数据方法
+        self.data = [self readData];
+        NSArray* keys = [self.data allKeys];
         //对key进行排序
-        self.arrayGameDataList=[keys sortedArrayUsingSelector:@selector(compare:)];
-        
+        self.arrayGameDateList = [keys sortedArrayUsingSelector:@selector(compare:)];
     }
+    
 }
 
-//查询数据的方法。
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+//查询所有数据方法
 -(NSMutableDictionary*) readData {
-    ScheduleDAO *scheduleDAO=[ScheduleDAO sharedInstance];
-    NSMutableArray* schedules=[[NSMutableArray alloc] init];
-    NSMutableDictionary *resDict=[[NSMutableDictionary alloc] init];
+    ScheduleDAO *scheduleDAO = [ScheduleDAO sharedInstance];
     
-    EventsDAO *eventsDAO=[EventsDAO sharedInstance];
+    NSMutableArray* schedules  = [scheduleDAO findAll];
+    NSMutableDictionary *resDict = [[NSMutableDictionary alloc] init];
+    
+    EventsDAO *eventsDAO = [EventsDAO sharedInstance];
     
     //延迟加载Events数据
     for (Schedule *schedule in schedules) {
-        Events *event=[eventsDAO findById:schedule.Event];
-        schedule.Event=event;
+        Events *event = [eventsDAO findById:schedule.Event];
+        schedule.Event = event;
         
-        NSArray *allkey=[resDict allKeys];
+        NSArray  *allkey = [resDict allKeys];
         
-        //把数据结构(nsmutableArray) 转化成字典结构 （nsmutableDictionary)
-        if ([allkey containsObject:schedule.GameDate]) {
-            NSMutableArray* value=resDict[schedule.GameDate];
+        //把数组（NSMutableArray）结构转化为字典（NSMutableDictionary）结构
+        if([allkey containsObject:schedule.GameDate]) {
+            NSMutableArray* value = resDict[schedule.GameDate];
             [value addObject:schedule];
-        }
-        else
-        {
-            NSMutableArray* value=[[NSMutableArray alloc] init];
+        } else {
+            NSMutableArray* value = [[NSMutableArray alloc] init];
             [value addObject:schedule];
-            resDict[schedule.GameDate]=value;
+            resDict[schedule.GameDate] = value;
         }
     }
     return resDict;
 }
 
-#pragma mark - Table view data source
+#pragma mark -- 表视图数据源
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSArray* keys=[self.data allKeys];
+    NSArray* keys = [self.data allKeys];
     return [keys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //比赛日期
-    NSString* strGameDate= self.arrayGameDataList[section];
+    NSString* strGameDate = self.arrayGameDateList[section];
     //比赛日期下的比赛日程表
-    NSArray *schedules= self.data[strGameDate];
+    NSArray *schedules = self.data[strGameDate];
     return [schedules count];
-
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     //比赛日期
-    NSString* strGameDate=self.arrayGameDataList[section];
+    NSString* strGameDate = self.arrayGameDateList[section];
     return strGameDate;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
     //比赛日期
-    NSString* strGameDate=self.arrayGameDataList[indexPath.section];
+    NSString* strGameDate = self.arrayGameDateList[indexPath.section];
     //比赛日期下的比赛日程表
-    NSArray *schedules=self.data[strGameDate];
+    NSArray *schedules = self.data[strGameDate];
     
-    Schedule *schedule=schedules[indexPath.row];
-    NSString* subtitle=[[NSString alloc] initWithFormat:@"%@ | %@",schedule.GameInfo,schedule.Event.EventName];
+    Schedule *schedule = schedules[indexPath.row];
+    NSString* subtitle = [[NSString alloc] initWithFormat:@"%@ | %@", schedule.GameInfo, schedule.Event.EventName];
     
-    cell.textLabel.text=schedule.GameTime;
-    cell.detailTextLabel.text=subtitle;
+    cell.textLabel.text = schedule.GameTime;
+    cell.detailTextLabel.text = subtitle;
     
     return cell;
 }
 
--(NSArray *) sectionIndexTitlesForTabView:(UITableView *) tabView{
-    NSMutableArray *listTitles=[[NSMutableArray alloc] init];
-    //2020-08-09 ->08-09
-    for (NSString *item in self.arrayGameDataList ) {
-        NSString *title=[item substringFromIndex:5];
+-(NSArray *) sectionIndexTitlesForTableView: (UITableView *) tableView {
+    NSMutableArray *listTitles = [[NSMutableArray alloc] init];
+    // 2020-08-09 -> 08-09
+    for (NSString *item in self.arrayGameDateList) {
+        NSString *title = [item substringFromIndex:5];
         [listTitles addObject:title];
     }
     return listTitles;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

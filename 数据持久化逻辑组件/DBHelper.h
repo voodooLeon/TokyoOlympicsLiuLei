@@ -16,12 +16,13 @@ static sqlite3 *db;
 @interface DBHelper : NSObject
 
 //获取沙箱Dcument目录下的全路径
-+(const char*)applicationDocumentDirectoryFile:(NSString*)fileName;
+//获得沙箱Document目录下全路径
++ (const char *)applicationDocumentsDirectoryFile:(NSString *)fileName;
 
 //初始化并加载数据
 +(void)initDB;
 
 //从数据库获得当前数据库的版本号
-+(int)dbVersionNumber;
++ (int)dbVersionNubmer;
 @end
 

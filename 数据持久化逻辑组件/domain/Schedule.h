@@ -15,7 +15,7 @@
 //编号
 @property(nonatomic,assign)int ScheduleID;
 //比赛日期
-@property(nonatomic,assign) NSString* GameDate;
+@property(nonatomic,strong) NSString* GameDate;
 //比赛时间
 @property(nonatomic,strong) NSString* GameTime;
 //比赛描述

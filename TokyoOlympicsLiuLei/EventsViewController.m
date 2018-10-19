@@ -58,6 +58,7 @@
     //设置可重用单元格标识与单元格类型
     [self.collectionView registerClass:[EventsViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
     
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
     

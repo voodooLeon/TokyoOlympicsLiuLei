@@ -7,7 +7,7 @@
 //
 
 #import "BaseDAO.h"
-#import "DBHelper.h""
+#import "DBHelper.h"
 
 @implementation BaseDAO
 -(id)init{
@@ -20,7 +20,7 @@
 
 -(BOOL)openDB{
     
-    const char* dbFilePath=[DBHelper applicationDocumentDirectoryFile:DB_FILE_NAME];
+    const char* dbFilePath = [DBHelper applicationDocumentsDirectoryFile:DB_FILE_NAME];
     
     NSLog(@"DbFilePath = %s",dbFilePath);
     

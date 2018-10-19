@@ -26,7 +26,7 @@ static EventsDAO *sharedSingleton = nil;
 - (int)create:(Events *)model{
     if([self openDB]){
         
-        NSString *sqlstr=@"insert into Events(EventName,EventIcon,Keyinfo,BasicInfo,OlympicInfo) values(?,?,?,?,?)";
+        NSString *sqlstr=@"insert into Events(EventName,EventIcon,Keyinfo,BasicsInfo,OlympicInfo) values(?,?,?,?,?)";
         sqlite3_stmt *statement;
         //预处理过程
         if(sqlite3_prepare_v2(db,[sqlstr UTF8String],-1,&statement,NULL)==SQLITE_OK)
@@ -101,7 +101,7 @@ static EventsDAO *sharedSingleton = nil;
     NSMutableArray *listData=[[NSMutableArray alloc] init];
     
     if ([self openDB]) {
-        NSString *qsql = @"select EventName,EventIcon,KeyInfo,BaciscInfo,OlympicInfo,EventID from Events";
+        NSString *qsql = @"select EventName,EventIcon,KeyInfo,BasicsInfo,OlympicInfo,EventID from Events";
         
         sqlite3_stmt *statement;
         
